@@ -1,95 +1,113 @@
-                                      **Git Intro Part 1**
+<h1>Git Intro Part 1</h1><br>
 
-Git is an open-source Version Control system. Version Control is all about the management of different versions of a project. Version Control records each change made to a file and offers a way to undo or rollback each change.
+<div>
+    Git is an open-source Version Control system. Version Control is all about the management of different versions of a project.
+    Version Control records each change made to a file and offers a way to undo or rollback each change.
+</div><br>
+<div><h2>
+Installation
+</h2></div><br>
 
-**Installation**
-
+<div>
 Regarding your OS, download and install Git.
+</div><br>
+
+<a href="https://git-scm.com/downloads">Download Git</a><br>
+
+<div><h2>
+Getting Started
+</h2></div><br>
+
+<div>To start a project open a terminal(cmd on Windows) and execute the following line:</div><br>
 
 
-[](https://git-scm.com/downloads)
+<code class="hljs language-xml" style="font-size:20px">$git init</code><br>
 
-**Getting started**
-
-To start a project open a terminal(cmd on Windows) and execute the following line:
-
-**$git init** 
-
-This command creates an empty git repository. You should be able to see a .git file in your working directory.
+<p>
+This command creates an empty git repository. You should be able to see a .git file in your working directory.<br>
 
 let's add a new file to our repository. Create a text file and name it README.md(readme files are known as a primary introduction profile for repositories). After creating a new file execute the below lines and you should see results like the following picture.
+</p>
 
-**$git status**
+<code class="hljs language-xml" style="font-size:20px">$git status</code><br>
 
-![figure_01](uploads/5ed8d05526d08291563cad0844b571e0/figure_01.PNG)
+<img src="images/git/part-1/figure_01.PNG" alt="img: git status"><br><br>
 
+<p>
 Git does not track each and every file that is located in your working directory. To add a file to git's tracking list, the following command is used.
+</p><br>
 
-**$git add file_name**
+<code style="font-size:20px"> $git add &ltfile_name&gt</code>
 
-in our case: "$git add README.md"
+<p>
+    in our case:<br> <code style="font-size:20px">$git add README.md</code><br>
+    To add all files:<br>  <code style="font-size:20px">$git add --all</code>
+</p><br>
 
-To add all files:  **$git add -A**
+<img src="images/git/part-1/figure_02.PNG" alt="img: git add"><br><br>
 
-![figure_02](uploads/5714489a307be1d173122d05fd296f0f/figure_02.PNG)
+<p>
+    Tracking a file is not equal to saving changes. To save the changes made in a project it's needed to <b>commit</b> the files.<br>
 
-Tracking a file is not equal to saving changes. To save the changes made in a project it's needed to **commit** the files.  
+To commit a file execute the below lines:<br>
 
-To commit a file execute the below lines:
+    <code class="hljs language-xml" style="font-size:20px">$git commit -m "commit message"</code><br><br>
 
-**$git commit -m "commit message"** 
+    in our case: <code class="hljs language-xml" style="font-size:20px">$git commit -m "add README.md"</code><br>
 
-in our case: "$git commit -m "add README.md""
+That's it the changes have been saved, and it's possible to roll back to this commit at any time in the future.<br>
 
-That's it the changes have been saved, and it's possible to roll back to this commit at any time in the future.
+Create new files and change the content of README.md and commit them.<br>
 
-Create new files and change the content of README.md and commit them.
+To see the logs execute:<br>
 
-To see the logs execute:
+    <code class="hljs language-xml" style="font-size:20px">$git log --oneline</code><br>
 
-**$git log --oneline**
+you should see something like the below picture.<br>
+</p>
+<img src="images/git/part-1/figure_03.PNG" alt="img: git 03"><br><br>
 
-you should see something like the below picture.
 
-![figure_03](uploads/d4bf8ef021f21e9415e3497fb5016c7f/figure_03.PNG)
+<h2>Remote repositories</h2>
+<p>
+So far we saved and tracked files and changes in our local system, what if we want to share the files with a colleague or want to save them in a cloud??<br>
 
-**Remote repositories**
+There are two main remote repositories based on Git, namely Github and GitLab. We are going to discover Gitlab because it provides private repositories with other fantastic features like DevOps, gitlab-ci, and ...<br>
 
-So far we saved and tracked files and changes in our local system, what if we want to share the files with a colleague or want to save them in a cloud??
+Shipping projects on GitLab is completely straight forward:<br>
 
-There are two main remote repositories based on Git, namely Github and GitLab. We are going to discover Gitlab because it provides private repositories with other fantastic features like DevOps, gitlab-ci, and ...
+First, create a new project like the following picture:<br>
+</p>
+<img src="images/git/part-1/figure_04.PNG" alt="img: git 04"><br><br>
 
-Shipping projects on GitLab is completely straight forward:
+After filling the project name and selecting the visibility level, you'll see something like the below picture:<br>
 
-First, create a new project like the following picture:
+<img src="images/git/part-1/figure_05.PNG" alt="img: git 05"><br><br>
 
-![figure_04](uploads/dec16a5bdb86b1b536afbfbdc3bf6feb/figure_04.PNG)
+The instructions contained in the picture are self-explanatory but to summerize the below line of codes can be used to add a project to a remote repository:<br>
 
-After filling the project name and selecting the visibility level, you'll see something like the below picture:
+<h2>git remote add origin project_address</h2>
 
-![figure_05](uploads/e3e5e36d6a24989e01f609926fd453be/figure_05.PNG)
+in our case: <code class="hljs language-xml" style="font-size:20px">$git remote add origin https://gitlab.com/pooya_/git_test.git</code><br>
 
-The instructions contained in the picture are self-explanatory but to summerize the below line of codes can be used to add a project to a remote repository:
+Pushing commits and files is available using:<br>
 
-**$git remote add origin project_address**
+<code class="hljs language-xml" style="font-size:20px">$git push origin branch_name</code><br>
+note: we'll talk about branches in the next parts.<br>
 
-in our case: "$git remote add origin https://gitlab.com/pooya_/git_test.git"
+in a simple case: <code class="hljs language-xml" style="font-size:20px">$git push origin master</code><br>
 
-Pushing commits and files is available using:
+If you reload the project window you'll see something like the picture below:<br>
 
-**$git push origin branch_name** # we'll talk about branches in the next parts.
+<img src="images/git/part-1/figure_06.PNG" alt="img: git 06"><br><br>
 
-in a simple case: "**$git push origin master**"
+That's it, all the files are uploaded on the GitLab repo.<br>
 
-If you reload the project window you'll see something like the picture below:
+Note:<br>
+In almost all of the projects, the project is synced to a remote repository from day one. So the following commands happen to occur together most often:<br><br>
 
-![figure_06](uploads/fe30ec5b061993ed3071330062e59328/figure_06.PNG)
-
-That's it, all the files are uploaded on the GitLab repo.
-
-Note:
-In almost all of the projects, the project is synced to a remote repository from day one. So the following commands happen to occur together most often:
-
-git add filename or git add -A or git add .
-git commit -m "commit message"
-git push origin master     
+<code class="hljs language-xml" style="font-size:20px">
+git add filename or git add -A or git add .<br>
+git commit -m "commit message"<br>
+git push origin master     <br>
+</code>

@@ -1,0 +1,75 @@
+<h1>branches</h1>
+
+This part is the second part of our Git Intro, and we'll discuss branches in GitLab. Branches are one of the crucial features of Git, and the management of teams is almost impossible without it.<br>
+
+Upcoming content is about covering the following questions:<br>
+
+<ul>
+    <li>What is a branch</li>
+    <li>How to create a branch</li>
+    <li>What are the best practices concerning branches</li>
+</ul>
+<h2>What is a branch</h2>
+A branch is a set of codes and files with a unique name. Each repository can have one or more branches. When a git repo is created, by default, its called <b>"master"</b>. The master branch is the main branch, and all the changes eventually should get merged into it. <br>
+
+So the question arises why do we need more than one branch! To answer the question, imagine that you and one of your colleagues are working on the same project, and you both want to add new lines of code to a specific file; what would happen? To be honest, chaos!! And that's not all, you'll encounter thousands of conflicts each time you want to commit a change, and testing will be almost impossible. Let's not extend the illustrated scenario to more than two participants.<br>
+
+As you all guessed by now, the solution is to create different branches for different tasks. So till the end of your task, you can do your commits with no worry of messing up others' codes or tests, and run your tests without concern for anyone's interrupting changes.<br>
+
+<h2>How to create a branch</h2>
+
+Creating a new branch is extremely straight forward. As mentioned in the previous parts, the remote server for hosting our codes is GitLab the local one is Git. First, Let's see how to create a branch on our local machine:<br>
+
+<code class="hljs language-xml" style="font-size:20px">
+git branch branch_name
+</code><br>
+
+To list the local branches, use the following command:<br>
+
+<code class="hljs language-xml" style="font-size:20px">
+    git branch</code><br>
+
+Your results may be slightly different:<br><br>
+
+<img src="images/git/part-2/picture_07.PNG" alt="img: git 07"><br><br>
+
+As you can see, there is a star on the left side of the master, which shows that the main branch is still the master branch, and the new changes will be applied to the master branch. Switching between branches is done using the following command:<br>
+
+<code class="hljs language-xml" style="font-size:20px">git checkout branch_name</code><br>
+
+in our case: <code class="hljs language-xml" style="font-size:20px">git checkout new_branch</code><br>
+
+List the branches again, and now the star will be shown on the left side of the "new_branch".<br>
+
+Pushing our branch to the remote repository is done through the following commands:<br><br>
+
+<code class="hljs language-xml" style="font-size:20px">git add file_names</code><br>
+<code class="hljs language-xml" style="font-size:20px">git commit -m "commit message"</code><br>
+<code class="hljs language-xml" style="font-size:20px">git push origin branch_name</code><br>
+
+Like always, we add, commit, and push the files to a remote repository. The only difference is the branch name. Instead of "master", you can push your commits to any branch that you desire. If the branch name weren't in the list of remote branch names, Git would generate a new branch. Otherwise, it would use the existing ones.<br>
+
+As you realized by now, the name of the local branches and the remote branches don't need to be identical, and you can push any commit from any local branch to any remote branch. Still, it's a best practice to use a unique name for both branches in the local and remote repositories. It's worth mentioning that, for listing remote branches, adding -r (r standing for "remote") to the local counterpart command would suffice.<br>
+
+Note: if you clone a repository, say OpenCV, and list the local branches, you would find just the master branch. It doesn't mean the other branches haven't been cloned; rather all the branches are inside the .git file, and to access them, you need to check out, like the following commands.<br>
+<br>
+<code class="hljs language-xml" style="font-size:20px">git clone https://github.com/opencv/opencv</code><br>
+<code class="hljs language-xml" style="font-size:20px">cd opencv</code><br>
+<code class="hljs language-xml" style="font-size:20px">git checkout 3.4</code><br>
+
+<h2>What are best practices concerning branches</h2>
+
+As discussed previously, each branch is for a specific issue. Project maintainers create issues to demand developers to resolve a bug or add a new feature. So if you are part of a team and your title is Developer, you probably are not allowed to push your commits directly to the master branch. So here is the step by step guide that you may take to fulfill an issue:<br><br>
+<ol>
+    <li>clone the repository if you haven't already</li>
+    <li>pull to the latest commits from the master branch</li>
+    <li>create a new branch</li>
+    <li>the name of the branch should be the same as the issue's title, or at least it should indicate which issue it attends.</li>
+    <li>push your commits to a remote repository. The naming rules is the same as the previous option</li>
+    <li>After accomplishing the issue, create a merge request to the master branch</li>
+    <li>If everything were alright, the maintainer would accept the merge request. Otherwise, they leave some comments on the merge request. After resolving the comments and demands, create another merge request.</li>
+    <li>After acceptance of the merge request, remove your branch.</li>
+</ol><br>
+Note: Some of the maintainers create a new branch called "developer" from the master branch, and they ask developers to create their branches from it and finally merge to it.<br>
+
+At the time of writing this article, I could come up with one best practice. I'll add other practices on the way.<br>

@@ -1,0 +1,26 @@
+<h1>Commit Messages in Git</h1>
+In this article, we will talk about Best Practices regarding commits and commit messages. The concept of appropriate Commit is one of the most overlooked topics in the Git environment. A commit should be <b>self-determining</b>, and <b>independent</b> and a commit message should be <b>concise</b>, <b>clear</b>, and <b>informative</b>. So in the future, if someone were to check out a commit, they would have a clear sense of what it is. So let's dive into the rules that must be taken into account before committing any changes.<br>
+
+<h2>Commit Best Practice</h2>
+
+<ol>
+    <li> if a commit needs other commits to make sense, it shouldn’t exist.</li>
+    <li> never commit a half-done task.</li>
+    <li> an excellent way to know if you are in the wrong path when splitting tasks is to check the possible commit message: if you think about using a very similar commit message, you probably made an error when breaking the task</li>
+    <li> Your commits must be independent, atomic, and complete</li>
+    <li> A commit message must be concise and straight to the point. You don’t need to tell everything that has changed. You just need to explain <b>why</b> those changes were made</li>
+    <li> Remember that you are not the only one who will read the message</li>
+    <li> Git message should tell <b>WHY</b> the changes were made. If someone wanted to see <b>WHAT</b> has changed, they would look into the Git diff.</li>
+    <li> Commit messages should be easy on the eye. It shouldn't become more than a line because the Git log doesn't support new lines.</li>
+    <li> You should not write messages longer than 50 characters.</li>
+    <li> Obviously, Begin the message by a capital letter.</li>
+    <li> Use the present time and get rid of unnecessary articles.</li>
+</ol>
+<br>
+The messages must be clear and contextualized. Context is vital in big projects when many developers work on different parts. For example, many developers begin their commit messages by the context or area of the project touched by the changes(like the first row in the following table). Unclear or vague messages such as “change main,” “fix bugs,” “minor fixes,” and “updates” should be avoided at all costs. They are often misleading and force the user to look at diffs.<br>
+
+The following table is an illustration of different commit messages.<br>
+
+<img src="images/git/part-3/git_01.jpeg" alt="img: git 01"><br><br>
+
+
