@@ -1,0 +1,95 @@
+                                      **Git Intro Part 1**
+
+Git is an open-source Version Control system. Version Control is all about the management of different versions of a project. Version Control records each change made to a file and offers a way to undo or rollback each change.
+
+**Installation**
+
+Regarding your OS, download and install Git.
+
+
+[](https://git-scm.com/downloads)
+
+**Getting started**
+
+To start a project open a terminal(cmd on Windows) and execute the following line:
+
+**$git init** 
+
+This command creates an empty git repository. You should be able to see a .git file in your working directory.
+
+let's add a new file to our repository. Create a text file and name it README.md(readme files are known as a primary introduction profile for repositories). After creating a new file execute the below lines and you should see results like the following picture.
+
+**$git status**
+
+![figure_01](uploads/5ed8d05526d08291563cad0844b571e0/figure_01.PNG)
+
+Git does not track each and every file that is located in your working directory. To add a file to git's tracking list, the following command is used.
+
+**$git add file_name**
+
+in our case: "$git add README.md"
+
+To add all files:  **$git add -A**
+
+![figure_02](uploads/5714489a307be1d173122d05fd296f0f/figure_02.PNG)
+
+Tracking a file is not equal to saving changes. To save the changes made in a project it's needed to **commit** the files.  
+
+To commit a file execute the below lines:
+
+**$git commit -m "commit message"** 
+
+in our case: "$git commit -m "add README.md""
+
+That's it the changes have been saved, and it's possible to roll back to this commit at any time in the future.
+
+Create new files and change the content of README.md and commit them.
+
+To see the logs execute:
+
+**$git log --oneline**
+
+you should see something like the below picture.
+
+![figure_03](uploads/d4bf8ef021f21e9415e3497fb5016c7f/figure_03.PNG)
+
+**Remote repositories**
+
+So far we saved and tracked files and changes in our local system, what if we want to share the files with a colleague or want to save them in a cloud??
+
+There are two main remote repositories based on Git, namely Github and GitLab. We are going to discover Gitlab because it provides private repositories with other fantastic features like DevOps, gitlab-ci, and ...
+
+Shipping projects on GitLab is completely straight forward:
+
+First, create a new project like the following picture:
+
+![figure_04](uploads/dec16a5bdb86b1b536afbfbdc3bf6feb/figure_04.PNG)
+
+After filling the project name and selecting the visibility level, you'll see something like the below picture:
+
+![figure_05](uploads/e3e5e36d6a24989e01f609926fd453be/figure_05.PNG)
+
+The instructions contained in the picture are self-explanatory but to summerize the below line of codes can be used to add a project to a remote repository:
+
+**$git remote add origin project_address**
+
+in our case: "$git remote add origin https://gitlab.com/pooya_/git_test.git"
+
+Pushing commits and files is available using:
+
+**$git push origin branch_name** # we'll talk about branches in the next parts.
+
+in a simple case: "**$git push origin master**"
+
+If you reload the project window you'll see something like the picture below:
+
+![figure_06](uploads/fe30ec5b061993ed3071330062e59328/figure_06.PNG)
+
+That's it, all the files are uploaded on the GitLab repo.
+
+Note:
+In almost all of the projects, the project is synced to a remote repository from day one. So the following commands happen to occur together most often:
+
+git add filename or git add -A or git add .
+git commit -m "commit message"
+git push origin master     
