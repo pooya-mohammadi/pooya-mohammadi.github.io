@@ -1,4 +1,86 @@
-<h1>Git Intro Part 1</h1><br>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pooya Mohammadi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+ 
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(../images/about.jpg);"></div>
+				<h1 id="colorlib-logo"><a href="../index.html">Pooya Mohammadi</a></h1>
+				<span class="position">AI Developer</span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li><a href="../index.html" data-nav-section="home">Home</a></li>
+						<li ><a href="#">Git Intro</a>
+							<li class="active"><a href="./git.html" class="sub-menu" >part-1: basics: Git Intro Part 1</a></li>
+							<li><a href="./branches.html" class="sub-menu" >part-2: basics: branches</a></li>
+							<li><a href="./commits.html" class="sub-menu" >part-3: basics: commits and messages</a></li>
+							<li><a href="./faq.html" class="sub-menu" >faq</a></li>
+						</li>
+						<li><a href="#" >Agile</a></li>
+						<li><a href="#">Machine Learning</a></li>
+						<li><a href="#" >Deep Learning</a></li>
+						<li><a href="#">Deep Learning-Advanced</a></li>
+						
+					</ul>
+				</div>
+			</nav>
+
+
+
+		</aside>
+
+		<div id="colorlib-main">
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">GIT</span>
+										<h2 class="colorlib-heading">Git Intro Part 1</h2>
+										
+									
 
 <div>
     Git is an open-source Version Control system. Version Control is all about the management of different versions of a project.
@@ -31,7 +113,7 @@ let's add a new file to our repository. Create a text file and name it README.md
 
 <code class="hljs language-xml" style="font-size:20px">$git status</code><br>
 
-<img src="images/git/part-1/figure_01.PNG" alt="img: git status"><br><br>
+<img src="../images/git/part-1/figure_01.PNG" alt="img: git status"><br><br>
 
 <p>
 Git does not track each and every file that is located in your working directory. To add a file to git's tracking list, the following command is used.
@@ -44,7 +126,7 @@ Git does not track each and every file that is located in your working directory
     To add all files:<br>  <code style="font-size:20px">$git add --all</code>
 </p><br>
 
-<img src="images/git/part-1/figure_02.PNG" alt="img: git add"><br><br>
+<img src="../images/git/part-1/figure_02.PNG" alt="img: git add"><br><br>
 
 <p>
     Tracking a file is not equal to saving changes. To save the changes made in a project it's needed to <b>commit</b> the files.<br>
@@ -65,7 +147,7 @@ To see the logs execute:<br>
 
 you should see something like the below picture.<br>
 </p>
-<img src="images/git/part-1/figure_03.PNG" alt="img: git 03"><br><br>
+<img src="../images/git/part-1/figure_03.PNG" alt="img: git 03"><br><br>
 
 
 <h2>Remote repositories</h2>
@@ -78,11 +160,11 @@ Shipping projects on GitLab is completely straight forward:<br>
 
 First, create a new project like the following picture:<br>
 </p>
-<img src="images/git/part-1/figure_04.PNG" alt="img: git 04"><br><br>
+<img src="../images/git/part-1/figure_04.PNG" alt="img: git 04"><br><br>
 
 After filling the project name and selecting the visibility level, you'll see something like the below picture:<br>
 
-<img src="images/git/part-1/figure_05.PNG" alt="img: git 05"><br><br>
+<img src="../images/git/part-1/figure_05.PNG" alt="img: git 05"><br><br>
 
 The instructions contained in the picture are self-explanatory but to summerize the below line of codes can be used to add a project to a remote repository:<br>
 
@@ -99,7 +181,7 @@ in a simple case: <code class="hljs language-xml" style="font-size:20px">$git pu
 
 If you reload the project window you'll see something like the picture below:<br>
 
-<img src="images/git/part-1/figure_06.PNG" alt="img: git 06"><br><br>
+<img src="../images/git/part-1/figure_06.PNG" alt="img: git 06"><br><br>
 
 That's it, all the files are uploaded on the GitLab repo.<br>
 
@@ -124,8 +206,48 @@ To <b>Download</b> the project we need to <b>Clone</b> it<br><br>
 <code class="hljs language-xml" style="font-size:20px"> git clone https://github.com/Practical-AI/deep_utils.git</code>
 
 Check out the following figure as an example:<br>
-<img src="images/git/part-1/figure_07.PNG" alt="img: git 06"><br><br>
+<img src="../images/git/part-1/figure_07.PNG" alt="img: git 06"><br><br>
 
 Now the code is in your local machine in the exact directory that you download it. It's ready to be developed!!<br>
 
+
+
+
+										
+									</div>
+								</div>
+							</div>
+						
+							
+							</div>
+						</div>
+					</div>
+			
+			</section>
+
+
+		
+			
+					
+						
+						
+				
+			</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="../js/main.js"></script>
+
+	</body>
+</html>
 
