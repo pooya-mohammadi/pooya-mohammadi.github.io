@@ -217,7 +217,7 @@ figure {
             color: #2c98f0; }
 
 .container-wrap {
-  max-width: 1170px;
+  /*max-width: 1170px;*/
   margin: 0 auto; }
 
 #colorlib-main {
@@ -1428,7 +1428,17 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+/******************/
 .sub-menu{
 	margin-left:10px;
 	font-size:10px;
+}
+code {
+    background-color: #eee;
+	font-size:14px !important;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+	color:black;
+	padding:10px;
 }
